@@ -1,0 +1,41 @@
+﻿<Window x:Class="Dierentuin3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Dierentuin3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" WindowStyle="ToolWindow">
+    <Grid>
+        <ListView x:Name="ListView1" ItemsSource="{Binding myAnimals}" Margin="0,0,149,161" SelectionChanged="ListView1_SelectionChanged">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Name}" Header="Dier" Width="150"></GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Energy}" Header="Energy" Width="150"></GridViewColumn>
+
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <TextBlock x:Name="Textblock1" HorizontalAlignment="Left" Margin="29,304,0,0" Text="Naam:
+                   " TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox x:Name="Textbox1" HorizontalAlignment="Left" Margin="29,325,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="Button1" Content="Add" HorizontalAlignment="Left" Margin="180,325,0,0" VerticalAlignment="Top" Click="Button1_Click"/>
+        <Button x:Name="Button4" Content="Feed All Animals" HorizontalAlignment="Left" Margin="684,45,0,0" VerticalAlignment="Top" Click="Button4_Click"/>
+        <Button x:Name="Button5" Content="Feed Apes" HorizontalAlignment="Left" Margin="684,70,0,0" VerticalAlignment="Top" Click="Button5_Click"/>
+        <Button x:Name="Button6" Content="Feed Lions" HorizontalAlignment="Left" Margin="684,95,0,0" VerticalAlignment="Top" Click="Button6_Click"/>
+        <Button x:Name="Button7" Content="Feed Elephants" HorizontalAlignment="Left" Margin="683,120,0,0" VerticalAlignment="Top" Click="Button7_Click"/>
+        <Button x:Name="Button8" Content="Click Me!" HorizontalAlignment="Left" Margin="400,335,0,0" Height="50
+                " VerticalAlignment="Top" Click="Button8_Click"/>
+        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="433,296,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="400,296,0,0" Text="Gold:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button x:Name="buyWorker" Content="Buy Worker" HorizontalAlignment="Left" Margin="484,336,0,0" VerticalAlignment="Top" Click="buyWorker_Click"/>
+        <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Margin="738,336,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="683,336,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Worker"/><Run Language="nl-nl" Text="s"/><Run Text=":"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="564,336,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="nl-nl" Text="Price = 10 gold"/></TextBlock>
+        <TextBlock x:Name="textBlock4" HorizontalAlignment="Left" Margin="738,357,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="683,357,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Investor"/><Run Language="nl-nl" Text="s"/><Run Text=":"/></TextBlock>
+        <Button x:Name="buyInvestor" Content="Buy Investor" HorizontalAlignment="Left" Margin="484,360,0,0" VerticalAlignment="Top" Click="buyInvestor_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="564,360,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="nl-nl" Text="Price = 15 gold"/></TextBlock>
+
+    </Grid>
+</Window>
